@@ -1,8 +1,11 @@
-
 public class GroceryItem {
 	private String name; 
 	private double price; 
 	private boolean taxable;
+	
+	public GroceryItem() {
+	
+	}
 	
 	public GroceryItem (String name, double price, boolean taxable) {
 		this.name = name;
@@ -30,8 +33,10 @@ public class GroceryItem {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		GroceryItem item1 = new GroceryItem("milk", 2.01, false);
+		System.out.println(item1);
 
 	}
 
 }
+
