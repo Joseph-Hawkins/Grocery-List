@@ -23,6 +23,13 @@ public class GroceryItem {
 	}
 	
 	public boolean equals(Object obj){
+		if (obj instanceof GroceryItem) {
+			GroceryItem item = (GroceryItem) obj;
+			System.out.println(item.toString());
+		}
+		else {
+			return false;
+		}
 		/**
 		 * returns true only if all the data field values of the two objects are the same
 		 */
@@ -35,6 +42,10 @@ public class GroceryItem {
 	public static void main(String[] args) {
 		GroceryItem item1 = new GroceryItem("milk", 2.00, false);
 		System.out.println(item1);
+		
+		GroceryItem item2 = new GroceryItem("milk", 2.00, false);
+		System.out.println(item2.equals(item1));
+		
 
 	}
 
