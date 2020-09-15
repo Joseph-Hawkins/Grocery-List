@@ -22,7 +22,7 @@ public class GroceryItem {
 		return taxable;
 	}
 	
-	public boolean equals(Object obj){ 
+	public boolean equals(Object obj){
 		return true;
 	} 
 	public String toString() { 
