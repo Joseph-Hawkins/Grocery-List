@@ -23,6 +23,9 @@ public class GroceryItem {
 	}
 	
 	public boolean equals(Object obj){
+		/**
+		 * returns true only if all the data field values of the two objects are the same
+		 */
 		return true;
 	} 
 	public String toString() { 

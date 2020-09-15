@@ -5,7 +5,7 @@ public class ShoppingBag {
 		return 0; 
 		
 	} // helper method to find an item 
-	private void grow() { 
+	private void grow() { //grow size by 5 when bag is full
 		
 	} // helper method to grow the capacity
 	
