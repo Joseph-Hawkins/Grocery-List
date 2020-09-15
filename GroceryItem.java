@@ -3,9 +3,6 @@ public class GroceryItem {
 	private double price; 
 	private boolean taxable;
 	
-	public GroceryItem() {
-	
-	}
 	
 	public GroceryItem (String name, double price, boolean taxable) {
 		this.name = name;
@@ -29,11 +26,11 @@ public class GroceryItem {
 		return true;
 	} 
 	public String toString() { 
-		return getName() + ": $" + getPrice() + " : " + getTaxable();
+		return getName() + ": $" + String.format("%.2f", getPrice()) + " : " + getTaxable();
 	}
 
 	public static void main(String[] args) {
-		GroceryItem item1 = new GroceryItem("milk", 2.01, false);
+		GroceryItem item1 = new GroceryItem("milk", 2.00, false);
 		System.out.println(item1);
 
 	}
