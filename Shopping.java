@@ -13,7 +13,6 @@ public class Shopping {
         System.out.println("Let's start shopping!");
         String input = sc.nextLine();
         ShoppingBag bag = new ShoppingBag();
-        while ( !"Q".equals(input)) {
     	char command = 0;
 
         while (true) {
