@@ -44,11 +44,12 @@ public class GroceryItem {
 	 * @param obj potential GroceryItem to compare. 
 	 * @return true if GroceryItems are equal, false otherwise.
 	 */
+	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof GroceryItem) {
 			GroceryItem item = (GroceryItem) obj;//cast to grocery item WHY?
 
-			if((this.name == item.name) && (this.price == item.price) && (this.taxable == item.taxable)) {
+			if((this.name.equals(item.name)) && (this.price == item.price) && (this.taxable == item.taxable)) {
 				return true;
 			}
 		}

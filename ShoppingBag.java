@@ -46,6 +46,7 @@ public class ShoppingBag {
 		if(size < bag.length) {
 			bag[size] = item;
 			size++;
+			System.out.println(item.getName() + " added to the bag.");
 			return;
 		}
 		grow();
@@ -105,7 +106,7 @@ public class ShoppingBag {
 	}
 
 	/**
-	 * Prints number of items and contents of shoppingBag.
+	 * Prints number of items and contents of ShoppingBag.
 	 */
 	public void print() {
 		System.out.println("**You have " + size + " items(s) in the bag:");
@@ -117,10 +118,26 @@ public class ShoppingBag {
 		System.out.println("**End of list");
 	}
 	
+	/** 
+	 * Returns the number of items in the ShoppingBag.
+	 * @return Number of items in the ShoppingBag in form of an int.
+	 */
 	public int getSize() {
 		return size;
 	}
 
+	/**
+	 * Returns true if the bag is empty.
+	 * @return True if the bag is empty, false otherwise.
+	 */
+	public boolean isEmpty() {
+		if(size == 0) {
+			return true;
+		}
+		
+		return false;
+	}
+	
 	public static void main(String[] args) {
 		GroceryItem item1 = new GroceryItem("milk", 2.00, true);
 		GroceryItem item2 = new GroceryItem("not milk", 2.00, false);
