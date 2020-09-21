@@ -50,8 +50,7 @@ public class ShoppingBag {
 		}
 		grow();
 		add(item);
-		return;
-		
+		return;	
 	}
 
 	/**
