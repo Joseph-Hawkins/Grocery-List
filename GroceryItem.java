@@ -1,3 +1,8 @@
+/**
+ * GroceryItem encapsulates the data fields; name, price, taxable.
+ * @author Joseph Hawkins, Gustavo Garcia
+ *
+ */
 public class GroceryItem {
 	private String name;
 	private double price;
@@ -57,11 +62,25 @@ public class GroceryItem {
 	}
 
 	/**
+	 * Helps convert the boolean taxable to a string for printing purposes.
+	 * @param taxable Boolean value; true if taxable, false if tax free.
+	 * @return is taxable if taxable, tax free if non taxable
+	 */
+	public String taxHelper(boolean taxable) {
+		if(taxable) {
+			return "is taxable";
+		}
+		else {
+			return "tax free";
+		}
+	}
+	
+	/**
 	 * Gets a formatted string about the GroceryItem.
 	 * @return itemName: $xx.xx : tax status.
 	 */
 	public String toString() {
-		return getName() + ": $" + String.format("%.2f", getPrice()) + " : " + getTaxable();
+		return getName() + ": $" + String.format("%.2f", getPrice()) + " : " + taxHelper(getTaxable());
 	}
 
 	public static void main(String[] args) {

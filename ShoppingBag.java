@@ -1,3 +1,8 @@
+/**
+ * This is the container class that holds an array of GroceryItems.
+ * @author Joseph Hawkins, Gustavo Garcia
+ *
+ */
 public class ShoppingBag {
 	private GroceryItem[] bag; // array-based implementation of the bag
 	private int size; // number of items currently in the bag
