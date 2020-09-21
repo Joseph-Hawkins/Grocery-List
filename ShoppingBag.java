@@ -116,6 +116,10 @@ public class ShoppingBag {
 		
 		System.out.println("**End of list");
 	}
+	
+	public int getSize() {
+		return size;
+	}
 
 	public static void main(String[] args) {
 		GroceryItem item1 = new GroceryItem("milk", 2.00, true);
