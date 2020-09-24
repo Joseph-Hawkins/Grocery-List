@@ -114,13 +114,11 @@ public class ShoppingBag {
 	 * Prints number of items and contents of ShoppingBag.
 	 */
 	public void print() {
-		System.out.println("**You have " + size + " items(s) in the bag:");
 		
 		for(int i = 0; i < size; i++) {
 			System.out.println(bag[i].toString());
 		}
 		
-		System.out.println("**End of list");
 	}
 	
 	/** 

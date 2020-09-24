@@ -7,6 +7,7 @@
 import java.util.Scanner;
 
 public class Shopping {
+	
 	/**
 	 * Handles the input commands, output data and messages.
 	 */
@@ -50,7 +51,9 @@ public class Shopping {
 	            		System.out.println("The bag is empty!");
 	            	}
 	            	else {
+	            		System.out.println("**You have " + bag.getSize() + " item(s) in the bag:");
 	            		bag.print();
+	            		System.out.println("**End of list");
 	            	}
 	            	break;
 	            
@@ -68,13 +71,16 @@ public class Shopping {
 	            	}
 	            	else {
 	            		//write checkout code
+	            		System.out.println("**Checking out " + bag.getSize() + " item(s):");
 	            		bag.print();
 	            		double salesTotal = bag.salesPrice();
 	            		double salesTax = bag.salesTax();
+	            		System.out.println("*Sales total: $" + String.format("%.2f", salesTotal));
+	            		System.out.println("*Sales tax: $" + String.format("%.2f", salesTax));
 	            		System.out.println("*Total amount paid: $" + String.format("%.2f", salesTotal + salesTax));
+	            		bag = new ShoppingBag();
 	            	}
-	            	sc.close();
-	            	return;
+	            	break;
 	            
 	            default:
 	            	System.out.println("Invalid Command!");
