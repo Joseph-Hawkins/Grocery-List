@@ -79,6 +79,7 @@ public class GroceryItem {
 	 * Gets a formatted string about the GroceryItem.
 	 * @return itemName: $xx.xx : tax status.
 	 */
+	@Override
 	public String toString() {
 		return getName() + ": $" + String.format("%.2f", getPrice()) + " : " + taxHelper(getTaxable());
 	}

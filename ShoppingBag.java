@@ -17,16 +17,18 @@ public class ShoppingBag {
 	}
 
 	/**
-	 * Search the ShoppingBag for a specific GroceryItem.
+	 * Searches the ShoppingBag for a specific GroceryItem.
 	 * @param item GroceryItem that we are searching for in the ShoppingBag.
 	 * @return index of the GroceryItem we were searching for.
 	 */
 	private int find(GroceryItem item) {
+		
 		for(int i = 0; i < size; i++) {
-			if(bag[i].equals(item)) {
+			if( bag[i].equals(item) ) {
 				return i;
 			}
 		}
+		
 		return -1;
 
 	} // helper method to find an item
@@ -34,28 +36,33 @@ public class ShoppingBag {
 	/**
 	 * Helper method to make ShoppingBag larger by 5.
 	 */
-	private void grow() { // grow size by 5 when bag is full
+	private void grow() {
 		GroceryItem[] tempBag = new GroceryItem[size + 5];
+		
 		for (int i = 0; i < size; i++) {
 			GroceryItem t = bag[i];
 			tempBag[i] = t;
 		}
+		
 		bag = tempBag;
-	} // helper method to grow the capacity
-
+	} 
+	
 	/**
 	 * Adds a GroceryItem to the shopping bag.
 	 * @param item GroceryItem to be added to the bag.
 	 */
 	public void add(GroceryItem item) {
-		if(size < bag.length) {
+		
+		if( size < bag.length ) {
 			bag[size] = item;
 			size++;
 			System.out.println(item.getName() + " added to the bag.");
 			return;
 		}
+		
 		grow();
 		add(item);
+		
 		return;	
 	}
 
@@ -69,7 +76,7 @@ public class ShoppingBag {
 	public boolean remove(GroceryItem item) {
 		int itemIndex = find(item);
 		
-		if(itemIndex == -1) {
+		if( itemIndex == -1 ) {
 			return false;
 		}
 		
@@ -102,8 +109,8 @@ public class ShoppingBag {
 		double salesTax = 0;
 		
 		for(int i = 0; i < size; i++) {
-			if(bag[i].getTaxable()) {
-				salesTax += (bag[i].getPrice() * 0.06625) ;
+			if( bag[i].getTaxable() ) {
+				salesTax += (bag[i].getPrice() * 0.06625);
 			}
 		}
 		
@@ -134,7 +141,7 @@ public class ShoppingBag {
 	 * @return True if the bag is empty, false otherwise.
 	 */
 	public boolean isEmpty() {
-		if(size == 0) {
+		if( size == 0 ) {
 			return true;
 		}
 		
