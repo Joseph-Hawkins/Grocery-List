@@ -150,7 +150,7 @@ public class ShoppingBag {
 	
 	/**
 	 * Test bed main
-	 * @param args
+	 * @param args all arguments coded into main.
 	 */
 	public static void main(String[] args) {
 		GroceryItem item1 = new GroceryItem("milk", 2.99, false);
