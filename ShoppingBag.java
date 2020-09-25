@@ -148,26 +148,41 @@ public class ShoppingBag {
 		return false;
 	}
 	
+	/**
+	 * Test bed main
+	 * @param args
+	 */
 	public static void main(String[] args) {
-		GroceryItem item1 = new GroceryItem("milk", 2.00, true);
-		GroceryItem item2 = new GroceryItem("not milk", 2.00, false);
+		GroceryItem item1 = new GroceryItem("milk", 2.99, false);
+		GroceryItem skittles = new GroceryItem("skittles", 2.99, true);
+		
 
 		ShoppingBag arr = new ShoppingBag();
+		
+		// Test 1 & 2: Testing add and grow.
 		arr.add(item1);
 		arr.add(item1);
-		arr.add(item2);
 		arr.add(item1);
 		arr.add(item1);
 		arr.add(item1);
-
-		arr.remove(item2);
-
+		System.out.println("**Number of items in the bag: " + arr.getSize());
+		arr.add(item1);
+		System.out.println("**Number of items in the bag: " + arr.getSize());
 		arr.print();
 		
-		System.out.println("Sales Price: " + arr.salesPrice());
-		System.out.println("Sales Tax: " + arr.salesTax());
+		// Test 3: Testing remove.
+		arr = new ShoppingBag();// clear shopping bag
+		arr.add(skittles);
+		arr.remove(skittles);
+		arr.remove(skittles);
+		arr.print();
 
-		
+		// Test 4: Testing salesTax.
+		arr = new ShoppingBag();// clear shopping bag
+		arr.add(item1);
+		arr.add(skittles);
+		arr.print();
+		System.out.println("Sales Tax: " + String.format("%.2f", arr.salesTax()));
 	}
 
 }
